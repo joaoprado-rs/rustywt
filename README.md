@@ -15,6 +15,7 @@ A simple JWT (JSON Web Token) generator implemented in Rust, focusing on the HS2
 
 
 JWT Generation: Create JSON Web Tokens with custom headers and payloads.
+
 HS256 Signing: Sign tokens using the HMAC SHA-256 algorithm.
 
-Generic Payload Support: Utilize Rust generics to support various payload types.   
+ Payload Support: Utilize Rust generics to support various payload types.   
