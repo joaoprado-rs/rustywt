@@ -1,1 +1,20 @@
 # rustywt
+
+A simple JWT (JSON Web Token) generator implemented in Rust, focusing on the HS256 (HMAC SHA-256) algorithm. This project demonstrates how to create and sign JWTs without relying on external JWT crates, providing an educational insight into the inner workings of JWTs and cryptographic signing in Rust.
+
+## Table of Contents
+
+   * Features
+   * Prerequisites
+   * Installation
+   * Usage
+   * Project Structure
+   * Contributing
+   * License
+   * Acknowledgments
+
+
+JWT Generation: Create JSON Web Tokens with custom headers and payloads.
+HS256 Signing: Sign tokens using the HMAC SHA-256 algorithm.
+
+Generic Payload Support: Utilize Rust generics to support various payload types.   

@@ -4,5 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+hex = "0.4.3"
 serde = "1.0.213"
 serde_json = "1.0.132"
+sha2 = "0.10.8"
+hmac = "0.12.1"
+hex-literal = "0.4.1"

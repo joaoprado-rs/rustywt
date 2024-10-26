@@ -1,4 +1,7 @@
+use hex_literal::hex;
+use hmac::{digest::generic_array::GenericArray, Hmac, Mac};
 use serde::{Deserialize, Serialize};
+use sha2::Sha256;
 
 struct JWT<T>
 where
@@ -14,9 +17,12 @@ struct Header {
     typ: String,
 }
 
+type HmacSha256 = Hmac<Sha256>;
+
 fn main() {
-    println!("HS256");
-    let header = signature_jwt("HS256");
+    let provided_256_bit_key = b"secret key";
+    let cipher = cipher_hs256(provided_256_bit_key);
+    println!("okay");
 }
 
 fn signature_jwt(alghoritm: &str) -> Header {
@@ -25,4 +31,12 @@ fn signature_jwt(alghoritm: &str) -> Header {
         typ: String::from("JWT"),
     };
     header
+}
+
+fn cipher_hs256(bytes: &[u8]) -> Vec<u8> {
+    let mut mac = HmacSha256::new_from_slice(bytes).expect("HMAC can take key of any size");
+    mac.update(b"input message");
+    let result = mac.finalize();
+    let cipher = result.into_bytes();
+    cipher.to_vec()
 }
