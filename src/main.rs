@@ -12,31 +12,48 @@ where
     payload: T,
     signature: String,
 }
+#[derive(Serialize, Deserialize)]
 struct Header {
     alg: String,
     typ: String,
 }
-
 type HmacSha256 = Hmac<Sha256>;
 
 fn main() {
-    let provided_256_bit_key = b"secret key";
-    let cipher = cipher_hs256(provided_256_bit_key);
-    println!("okay");
+    let jwt = generate_jwt_token();
+    println!("okay - {}", jwt);
 }
 
-fn signature_jwt(alghoritm: &str) -> Header {
-    let header = Header {
+fn header_jwt(alghoritm: &str) -> Header {
+     Header {
         alg: String::from(alghoritm),
         typ: String::from("JWT"),
-    };
-    header
+    }
 }
 
-fn cipher_hs256(bytes: &[u8]) -> Vec<u8> {
-    let mut mac = HmacSha256::new_from_slice(bytes).expect("HMAC can take key of any size");
-    mac.update(b"input message");
+fn cipher_hs256(bytes: &[u8], input_message: &str) -> Vec<u8> {
+    let mut mac = HmacSha256::new_from_slice(bytes)
+        .expect("Failed to initialize HMAC-SHA-256: ensure the provided key is valid and meets the required size.");
+    mac.update(input_message.as_bytes());
     let result = mac.finalize();
     let cipher = result.into_bytes();
     cipher.to_vec()
+}
+
+fn generate_jwt_token() -> String {
+    let header = header_jwt("HS256");
+    let header_encoded = base64_url::encode(&serde_json::to_string(&header).unwrap());
+
+    let payload = "{\"sub\":\"1234567890\",\"name\":\"John Doe\",\"iat\":1516239022}";
+    let payload_encoded = base64_url::encode(payload);
+
+    let signature = format!("{}.{}", header_encoded, payload_encoded);
+
+    let provided_256_bit_key = b"secret key";
+    let signature = cipher_hs256(provided_256_bit_key, &signature);
+    let signature_encoded = base64_url::encode(&signature);
+    format!("{}.{}.{}",
+            header_encoded,
+            payload_encoded,
+            signature_encoded)
 }

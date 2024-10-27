@@ -7,9 +7,11 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe8be2db-6f20-4f37-8d95-f420b1ba20e1" name="Changes" comment="improving MD">
+    <list default="true" id="fe8be2db-6f20-4f37-8d95-f420b1ba20e1" name="Changes" comment="publishing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +108,8 @@
       <option name="presentableId" value="Default" />
       <updated>1729917683129</updated>
       <workItem from="1729917684006" duration="2048000" />
-      <workItem from="1729953060208" duration="1364000" />
+      <workItem from="1729953060208" duration="2786000" />
+      <workItem from="1730051229308" duration="2113000" />
     </task>
     <task id="LOCAL-00001" summary="resolving conflicts">
       <option name="closed" value="true" />
@@ -132,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729953988698</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="publishing">
+      <option name="closed" value="true" />
+      <created>1729954566249</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729954566249</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +153,7 @@
     <MESSAGE value="resolving conflicts" />
     <MESSAGE value="enchancing MD" />
     <MESSAGE value="improving MD" />
-    <option name="LAST_COMMIT_MESSAGE" value="improving MD" />
+    <MESSAGE value="publishing" />
+    <option name="LAST_COMMIT_MESSAGE" value="publishing" />
   </component>
 </project>
