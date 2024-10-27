@@ -44,7 +44,7 @@ fn generate_jwt_token() -> String {
     let header = header_jwt("HS256");
     let header_encoded = base64_url::encode(&serde_json::to_string(&header).unwrap());
 
-    let payload = "{\"sub\":\"1234567890\",\"name\":\"John Doe\",\"iat\":1516239022}";
+    let payload = "{\"nome\":\"joao\"}";
     let payload_encoded = base64_url::encode(payload);
 
     let signature = format!("{}.{}", header_encoded, payload_encoded);
