@@ -5,7 +5,6 @@ use sha2::Sha256;
 
 struct JWT<T>
 where
-    //Trait bound
     T: Serialize + for<'de> Deserialize<'de>,
 {
     header: Header,
@@ -24,9 +23,9 @@ fn main() {
     println!("okay - {}", jwt);
 }
 
-fn header_jwt(alghoritm: &str) -> Header {
+fn header_jwt(algorithm: &str) -> Header {
      Header {
-        alg: String::from(alghoritm),
+        alg: String::from(algorithm),
         typ: String::from("JWT"),
     }
 }

@@ -7,9 +7,8 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe8be2db-6f20-4f37-8d95-f420b1ba20e1" name="Changes" comment="mocked jwt token">
+    <list default="true" id="fe8be2db-6f20-4f37-8d95-f420b1ba20e1" name="Changes" comment="updating README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +107,7 @@
       <updated>1729917683129</updated>
       <workItem from="1729917684006" duration="2048000" />
       <workItem from="1729953060208" duration="2786000" />
-      <workItem from="1730051229308" duration="2733000" />
+      <workItem from="1730051229308" duration="2910000" />
     </task>
     <task id="LOCAL-00001" summary="resolving conflicts">
       <option name="closed" value="true" />
@@ -150,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730053404040</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="updating README.md">
+      <option name="closed" value="true" />
+      <created>1730054042516</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730054042516</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +169,7 @@
     <MESSAGE value="improving MD" />
     <MESSAGE value="publishing" />
     <MESSAGE value="mocked jwt token" />
-    <option name="LAST_COMMIT_MESSAGE" value="mocked jwt token" />
+    <MESSAGE value="updating README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating README.md" />
   </component>
 </project>
